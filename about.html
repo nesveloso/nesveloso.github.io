@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icones/favicon-32x32.png" type="image/x-icon">
+    <title>Blog Nês</title>
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/5296546000.js" crossorigin="anonymous"></script>
+    <!-- LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="navigation">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logotipo" src="images/logo_nes.png" alt="Logo">
+                </a>
+            </div>
+            <div class="mode" onclick="lampada()">
+                <img id="light" width="60px" src="images/icones/light_mode.png" alt="Light Mode">
+            </div>
+            
+            <div class="menu-toggle" id="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="flex-container">
+            <div class="container-about">
+                <p class="about-text">
+                    Tudo começou e continua como um hobby. Este blog de fotografia é uma jornada pessoal, onde cada imagem capturada 
+                    guarda uma memória permanente.<br> Atualmente, uso uma Canon 100D, sigma 17-50.
+                    Assim, este blog não se limita a ser apenas uma coleção de imagens de animais, mas também abraça a vastidão da 
+                    fotografia de paisagens, cenários, etc... <br>
+                    É um diário visual que continua a evoluir, crescendo à medida que a jornada fotográfica se desenrola. 
+                    Depois do clique, gosto de dar um toque especial no Adobe photoshop e Lightroom.<br><br>
+                    <i>"Persiste a fotografia, a edição e o amor pelos animais, dando vida aos protagonistas destas narrativas visuais."</i>
+                </p>
+            </div>
+
+            <div class="container-image">
+                <img class="banner-photo" src="images/camera.png" alt="Camera">
+            </div>
+        </div>
+    </main>
+
+    
+   <footer id="main-footer">
+
+        <div class="container">
+            <p><a href="contact.html" target="">Contact Me</a></p>
+            <br>
+            <ul class="social-links text-center">
+                <li><a href="https://www.instagram.com/nes_veloso/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.pinterest.pt/nesveloso/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/inesveloso-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
+
+            <p class="text-center">&copy; <span id="displayDate"></span> - Inês Veloso</p>
+        </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

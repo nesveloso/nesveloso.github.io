@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icones/favicon-32x32.png" type="image/x-icon">
+    <title>Blog Nês</title>
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/5296546000.js" crossorigin="anonymous"></script>
+    <!-- LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="js/main.js" type="text/javascript"></script>
+    <!-- JS Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("2DZeL9in_KTs3pcpY");
+    })();
+    </script>
+
+</head>
+<body class="contact-page">
+
+    <div class="navigation">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logotipo" src="images/logo_nes.png" alt="Logo">
+                </a>
+            </div>
+            <div class="menu-toggle" id="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="flex-container">
+            <div class="container-contact">
+                <p class="contact-text">
+                    Um dos objetivos deste blog é dar continuidade a novas "caras".<br>
+                    Se tens um animal e desejas partilha-lo neste blog, fica à vontade para preencher este formulário
+                    e partilha as poses mais fotogénicas do patudo!<br>
+                </p>
+            </div>
+
+            <div class="container-form">
+                <form class="form_contact" method="POST" onsubmit="SendMail(event)">
+                
+                    <input type="text" id="fullName" name="name" placeholder="Your Name" required = "required">
+                    <input type="email" id="email_id" name="email" placeholder="Your Email" required = "required">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required = "required">
+                    <textarea id="message" name="message" placeholder="Your message" maxlength="1500" required = "required"></textarea>
+                    <input type="submit" name="process_form" value="Send Message" onclick="SendMail()">
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <ul class="social-links text-center">
+                <li><a href="https://www.instagram.com/nes_veloso/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.pinterest.pt/nesveloso/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/inesveloso-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
+
+            <p class="text-center">&copy; <span id="displayDate"></span> - Inês Veloso</p>
+        </div>
+      
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
