@@ -127,5 +127,35 @@
     <script src="js/custom.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/navbar.js"></script>
+
+
+    <!-- Open/Close Photo fullscreen -->
+    <div id="fullscreenModal" class="modal">
+        <span class="close" onclick="closeFullscreenModal()">&times;</span>
+        <img class="modal-content" id="fullscreenImage">
+    </div>
+
+    <script>
+        function openFullscreenModal(imgSrc) {
+            var modal = document.getElementById("fullscreenModal");
+            var img = document.getElementById("fullscreenImage");
+
+            img.src = imgSrc;
+            modal.style.display = "flex";
+        }
+
+        function closeFullscreenModal() {
+            var modal = document.getElementById("fullscreenModal");
+            modal.style.display = "none";
+        }
+
+        var cardPhotos = document.querySelectorAll(".card-full-gallery .card-photo");
+        cardPhotos.forEach(function(photo) {
+            photo.addEventListener("click", function() {
+            openFullscreenModal(photo.src);
+            });
+        });
+    </script>
+
 </body>
 </html>

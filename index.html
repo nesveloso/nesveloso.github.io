@@ -18,6 +18,7 @@
 </head>
 <body>
 
+    <!-- Navbar -->
     <div class="navigation">
         <div class="container">
             <div class="logo">
@@ -59,6 +60,7 @@
             </p>
         </div>
 
+        <!-- Gallery -->
         <div class="card-gallery">
             <div class="box">
 
@@ -125,7 +127,7 @@
                 <div class="card">
                     <div>
                         <img class="card-photo" src="images/photography/9.16/papi.png" alt="Papi">
-                        <p>Horus</p>
+                        <p>Papi</p>
                     </div>
                     <div>
                         <img class="card-photo" src="images/photography/9.16/corais.png" alt="Corais">
@@ -157,7 +159,7 @@
 
     </main>
 
-    
+        <!-- Footer -->
     <footer id="main-footer">
         <div class="container">
             <p><a href="contact.html" target="">Contact Me</a></p>
@@ -184,5 +186,36 @@
     <script src="js/custom.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/navbar.js"></script>
+
+
+    <!-- Open/Close Photo fullscreen -->
+    <div id="fullscreenModal" class="modal">
+        <span class="close" onclick="closeFullscreenModal()">&times;</span>
+        <img class="modal-content" id="fullscreenImage">
+    </div>
+
+    <script>
+        function openFullscreenModal(imgSrc){
+            var modal = document.getElementById("fullscreenModal");
+            var img = document.getElementById("fullscreenImage");
+
+            img.src = imgSrc;
+            modal.style.display = "flex";
+        }
+
+        function closeFullscreenModal() {
+            var modal = document.getElementById("fullscreenModal");
+            modal.style.display = "none";
+        }
+
+        var cardPhotos = document.querySelectorAll(".card-photo");
+        cardPhotos.forEach(function(photo) {
+            photo.addEventListener("click", function() {
+            openFullscreenModal(photo.src);
+            });
+            
+        });
+    </script>
+
 </body>
 </html>
