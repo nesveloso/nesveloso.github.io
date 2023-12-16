@@ -15,3 +15,23 @@ function SendMail(event){
         alert("Mensagem enviada com sucesso!");
     });
 }
+
+
+// Detectar idioma
+function obterIdiomaNavegador(){
+    return navigator.language || navigator.userLanguage;
+}
+
+function ConteudoPorIdioma(){
+    var codigoIdioma = obterIdiomaNavegador();
+
+    if (codigoIdioma.startsWith('pt')){
+        console.log('A carregar conteúdo em Português...');
+    }
+    else{
+        console.log('A carregar conteúdo em Inglês...');
+    }
+
+}
+
+ConteudoPorIdioma();

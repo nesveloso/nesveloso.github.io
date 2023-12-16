@@ -386,6 +386,10 @@ input, textarea{
     background-color: rgba(61, 61, 61, 0.7);
 }
 
+input::placeholder, textarea::placeholder{
+    color: #ffffff91;
+}
+
 input[type="submit"]{
     background-color: rgba(61, 61, 61, 0.8);
     color: rgb(179, 115, 179);
